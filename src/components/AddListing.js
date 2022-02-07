@@ -1,12 +1,13 @@
 import React, { useState } from "react";
 
 function AddListing({onAddListing}) {
-
-    const [newListing, setNewListing] = useState({
+    const newListingTemplate = {
         description: "",
         image: "",
         location: ""
-    })
+    }
+
+    const [newListing, setNewListing] = useState(newListingTemplate)
 
     const handleListingChange = (event) => {
         const name = event.target.name
@@ -29,6 +30,8 @@ function AddListing({onAddListing}) {
         })
         .then(r => r.json())
         .then(addedListing => onAddListing(addedListing))
+
+        setNewListing(newListingTemplate)
     }
 
     return (

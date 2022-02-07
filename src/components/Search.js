@@ -8,6 +8,7 @@ function Search({listings, setListings}) {
     const lowerCaseSearch = search.toLowerCase()
     const filteredListings = listings.filter(listing => listing.description.toLowerCase().includes(lowerCaseSearch))
     setListings(filteredListings)
+    setSearch("")
   }
 
   const alphabetizeLocations = () => {
