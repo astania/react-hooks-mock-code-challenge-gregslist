@@ -20,7 +20,7 @@ function App() {
 
   return (
     <div className="app">
-      <Header listingsToDisplay={listingsToDisplay}/>
+      <Header listingsToDisplay={listingsToDisplay} setListingsToDisplay={setListingsToDisplay} />
       <ListingsContainer listingsToDisplay={listingsToDisplay} onDeleteListing={handleDeleteListing} />
     </div>
   );
