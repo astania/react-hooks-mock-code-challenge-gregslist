@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from "react";
+import AddListing from "./AddListing";
 import Header from "./Header";
 import ListingsContainer from "./ListingsContainer";
+
 
 function App() {
   const [listingsToDisplay, setListingsToDisplay] = useState([])
@@ -18,10 +20,16 @@ function App() {
     
   }
 
+  const handleAddListing = (addedListing) => {
+    const updatedListings = [...listingsToDisplay, addedListing]
+    setListingsToDisplay(updatedListings)
+  }
+
   return (
     <div className="app">
       <Header listingsToDisplay={listingsToDisplay} setListingsToDisplay={setListingsToDisplay} />
       <ListingsContainer listingsToDisplay={listingsToDisplay} onDeleteListing={handleDeleteListing} />
+      <AddListing onAddListing={handleAddListing}/>
     </div>
   );
 }
