@@ -1,17 +1,18 @@
 import React, { useState } from "react";
 
-function Search({ listingsToDisplay, setListingsToDisplay }) {
+function Search({listings, setListings}) {
   const [search, setSearch] = useState("")
 
   function handleSubmit(e) {
     e.preventDefault();
     const lowerCaseSearch = search.toLowerCase()
-    const filteredListings = listingsToDisplay.filter(listing => listing.description.toLowerCase().includes(lowerCaseSearch))
-    setListingsToDisplay(filteredListings)
+    const filteredListings = listings.filter(listing => listing.description.toLowerCase().includes(lowerCaseSearch))
+    setListings(filteredListings)
   }
 
   const alphabetizeLocations = () => {
-    listingsToDisplay.sort((a, b) => (a.location.toLowerCase() > b.location.toLowerCase()) ? 1 : -1)
+    listings.sort((a, b) => (a.location.toLowerCase() > b.location.toLowerCase()) ? 1 : -1)
+    // console.log(alphabetizedListings)
   }
 
 

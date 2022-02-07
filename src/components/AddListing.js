@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-function AddListing({handleAddListing}) {
+function AddListing({onAddListing}) {
 
     const [newListing, setNewListing] = useState({
         description: "",
@@ -28,11 +28,11 @@ function AddListing({handleAddListing}) {
             body: JSON.stringify(newListing)
         })
         .then(r => r.json())
-        .then(addedListing => handleAddListing(addedListing))
+        .then(addedListing => onAddListing(addedListing))
     }
 
     return (
-        <div>
+        <div className="adding">
             <h3>Add a Listing</h3>
             <form onSubmit={handleSubmit}>
                 <input

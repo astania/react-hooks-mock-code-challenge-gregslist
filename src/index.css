@@ -53,6 +53,11 @@ header h1 {
   border-radius: 3px;
 }
 
+.adding {
+  padding: 0 1rem;
+  margin: 1rem
+}
+
 main {
   padding: 0 1rem;
   max-width: 1200px;
