@@ -31,22 +31,10 @@
       "location": "East Flatbush"
     },
     {
-      "description": "test",
+      "description": "bear",
       "image": "https://media.istockphoto.com/photos/brown-teddy-bear-isolated-in-front-of-a-white-background-picture-id909772478?k=20&m=909772478&s=612x612&w=0&h=mzLuJ7ywrSDHmpchf9spOeNF2Ovr2aQBw1z57Szx17g=",
-      "location": "toledo",
+      "location": "detroit",
       "id": 8
-    },
-    {
-      "description": "bear",
-      "image": "https://media.istockphoto.com/photos/brown-teddy-bear-isolated-in-front-of-a-white-background-picture-id909772478?k=20&m=909772478&s=612x612&w=0&h=mzLuJ7ywrSDHmpchf9spOeNF2Ovr2aQBw1z57Szx17g=",
-      "location": "wixom",
-      "id": 9
-    },
-    {
-      "description": "bear",
-      "image": "https://media.istockphoto.com/photos/brown-teddy-bear-isolated-in-front-of-a-white-background-picture-id909772478?k=20&m=909772478&s=612x612&w=0&h=mzLuJ7ywrSDHmpchf9spOeNF2Ovr2aQBw1z57Szx17g=",
-      "location": "wixom",
-      "id": 10
     }
   ]
 }
