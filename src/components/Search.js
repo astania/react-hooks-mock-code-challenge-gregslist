@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-function Search({listingsToDisplay, setListingsToDisplay}) {
+function Search({ listingsToDisplay, setListingsToDisplay }) {
   const [search, setSearch] = useState("")
 
   function handleSubmit(e) {
@@ -8,6 +8,10 @@ function Search({listingsToDisplay, setListingsToDisplay}) {
     const lowerCaseSearch = search.toLowerCase()
     const filteredListings = listingsToDisplay.filter(listing => listing.description.toLowerCase().includes(lowerCaseSearch))
     setListingsToDisplay(filteredListings)
+  }
+
+  const alphabetizeLocations = () => {
+    listingsToDisplay.sort((a, b) => (a.location.toLowerCase() > b.location.toLowerCase()) ? 1 : -1)
   }
 
 
@@ -21,6 +25,7 @@ function Search({listingsToDisplay, setListingsToDisplay}) {
         onChange={(e) => setSearch(() => e.target.value)}
       />
       <button type="submit">🔍</button>
+      <button onClick={alphabetizeLocations}>Location A -> Z</button>
     </form>
   );
 }
